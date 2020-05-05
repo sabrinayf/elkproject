@@ -49,8 +49,8 @@ Load balancing ensures that the application will be highly effective, in additio
 * The Jumpbox machine is a gateway for us to connect to the other Virtual Machines's on the Azure Network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What does Filebeat watch for?_
+- What does Metricbeat record?_
 * Filebeat collects the log data to centralize the filing system and Metricbeat collects the machine statistics and metrics such as the uptime. They both can then output the logfiles or the log events results to the location specified; to Logstash and Elasticsearch.
 
 The configuration details of each machine may be found below.
@@ -67,28 +67,28 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the #JUMPBOX machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 52.255.145.91
 
 Machines within the network can only be accessed by SSH.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_ 
+- Which machine did you allow to access your ELK VM? What was its IP address?_ 
 * The Jumpbox machine was allowed access, IP Address: 52.255.145.91
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | no                  | 10.0.0.4             |
-| ELK-VM   | no                  | 10.0.0.8             |
+| Jump Box | No                  | 10.0.0.4             |
+| ELK-VM   | No                  | 10.0.0.8             |
 |          |                     |                      |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- What is the main advantage of automating configuration with Ansible?_
 * The main advantage would be the playbooks, it was very simple to set them up and automate the tasks. 
 
-The playbook implements the following tasks:
+##### The playbook implements the following tasks:
 
 * Configuring ELK VM with the Docker to the hosts files and adding me (sabrinay) as a remote user
 * Installing docker to the machine
@@ -110,8 +110,6 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 Filebeat and Metricbeat
-
-
 
 These Beats allow us to collect the following information from each machine:
 Filebeat collects the log data to centralize the filing system, it keeps all the files written to disk memory. An example would be shipping the logs files to Elastic search. Whereas, Metricbeat collects the machine statistics and server metrics such as the uptime. E.g Metricbeat analyzes and monitors memory, CPU and loads. Both of these beats can be configured to a specific output destination but usually it ships the logs/data directly to Elastic search
