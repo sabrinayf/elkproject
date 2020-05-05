@@ -8,6 +8,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
   - Enter the playbook file._: filebeat.yml
 
+```
 --
   - name: Installing and Launch Filebeat
     hosts: elkservers
@@ -34,6 +35,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
       # Use command module
     - name: Start filebeat service
       command: service filebeat start
+```
 
 
 ### Description of the Topology
