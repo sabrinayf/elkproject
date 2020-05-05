@@ -42,11 +42,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly effective, in addition to restricting access to the network.
 
-What aspect of security do load balancers protect? What is the advantage of a jump box?_
+##### What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
-Load balancers protect by mitigating DoS attacks by distributing the traffic evenly across servers. 
+* Load balancers protect by mitigating DoS attacks by distributing the traffic evenly across servers. 
 
-The Jumpbox machine is a gateway for us to connect to the other Virtual Machines's on the Azure Network.
+* The Jumpbox machine is a gateway for us to connect to the other Virtual Machines's on the Azure Network.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system logs.
 - _TODO: What does Filebeat watch for?_
