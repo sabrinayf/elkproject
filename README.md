@@ -74,7 +74,7 @@ Only the Jumpbox machine can accept connections from the Internet. Access to thi
 
 Machines within the network can only be accessed by SSH.
 - Which machine did you allow to access your ELK VM? What was its IP address?_ 
-* The Jumpbox machine was allowed access, IP Address: 52.255.145.91
+    + The Jumpbox machine was allowed access, IP Address: 52.255.145.91
 
 A summary of the access policies in place can be found in the table below.
 
