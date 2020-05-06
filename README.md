@@ -97,7 +97,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 * Installing python and the python modules
 * Virtual memory is also being increase, the syntax to do so is provided in the playbook. command: ``` sysctl -w vm.max_map_count=262144 ``` 
 * Finally the docker container will be downloaded with image and with access to the mentioned published ports: 
-5601:5601,9200:9200,5044:5044
+``` 5601:5601,9200:9200,5044:5044 ```
 
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -106,8 +106,8 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-[webservers] 
- 10.0.0.8
+``` [webservers] 
+ 10.0.0.8 ```
 
 
 We have installed the following Beats on these machines:
@@ -121,8 +121,8 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 
-* Copy the filebeat.yml and the metricbeat.yml file to the /etc/ansible directory
-* Update the hosts file (nano hosts) to include the ELK machine under [webservers] and add the IP address of the machine (10.0.0.8).
-* After running the playbook (ansible-playbook filebeat.yml) , navigate to 13.68.154.40:5601 to check that the installation worked as expected. 
+* Copy the ``` filebeat.yml ``` and the ``` metricbeat.yml ``` file to the ``` /etc/ansible directory ```
+* Update the `` hosts `` file (``` nano hosts ```) to include the ELK machine under [webservers] and add the IP address of the machine (10.0.0.8).
+* After running the playbook (``` ansible-playbook filebeat.yml ```) , navigate to 13.68.154.40:5601 to check that the installation worked as expected. 
 
 
