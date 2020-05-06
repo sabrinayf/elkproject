@@ -95,7 +95,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 * Configuring ELK VM with the Docker to the hosts files and adding me (sabrinay) as a remote user
 * Installing docker to the machine
 * Installing python and the python modules
-* Virtual memory is also being increase, the syntax to do so is provided in the playbook. command: sysctl -w vm.max_map_count=262144
+* Virtual memory is also being increase, the syntax to do so is provided in the playbook. command: ``` sysctl -w vm.max_map_count=262144 ``` 
 * Finally the docker container will be downloaded with image and with access to the mentioned published ports: 
 5601:5601,9200:9200,5044:5044
 
